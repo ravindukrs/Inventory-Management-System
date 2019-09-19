@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagementSystem", "InventoryManagementSystem.csproj", "{16662A37-766A-4DBF-A478-EDC42AF9E194}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D503AC59-369A-41CB-BB2B-57FFABF05364}"
+	ProjectSection(SolutionItems) = preProject
+		PendingPurchaseReport.rpt = PendingPurchaseReport.rpt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16662A37-766A-4DBF-A478-EDC42AF9E194}.Debug|x86.ActiveCfg = Debug|x86
+		{16662A37-766A-4DBF-A478-EDC42AF9E194}.Debug|x86.Build.0 = Debug|x86
+		{16662A37-766A-4DBF-A478-EDC42AF9E194}.Release|x86.ActiveCfg = Release|x86
+		{16662A37-766A-4DBF-A478-EDC42AF9E194}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73CB7291-3474-4600-859F-C42B294A924F}
+	EndGlobalSection
+EndGlobal

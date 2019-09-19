@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="imsDataSet" targetNamespace="http://tempuri.org/imsDataSet.xsd" xmlns:mstns="http://tempuri.org/imsDataSet.xsd" xmlns="http://tempuri.org/imsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="imsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="imsConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.InventoryManagementSystem.Properties.Settings.GlobalReference.Default.imsConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clientTableAdapter" GeneratorDataComponentClassName="clientTableAdapter" Name="client" UserDataComponentName="clientTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="imsConnectionString (Settings)" DbObjectName="ims.client" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `hospital`, `identifier_code`, `area`, `contact_name`, `contact_number`, `email` FROM `client`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="po_itemTableAdapter" GeneratorDataComponentClassName="po_itemTableAdapter" Name="po_item" UserDataComponentName="po_itemTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="imsConnectionString (Settings)" DbObjectName="ims.po_item" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `po`, `item_code`, `qty` FROM `po_item`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="purchaseorderTableAdapter" GeneratorDataComponentClassName="purchaseorderTableAdapter" Name="purchaseorder" UserDataComponentName="purchaseorderTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="imsConnectionString (Settings)" DbObjectName="ims.purchaseorder" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `po`, `supplier_code`, `creation_time`, `postedUser`, `approval`, `recieved` FROM `purchaseorder`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="requestorderTableAdapter" GeneratorDataComponentClassName="requestorderTableAdapter" Name="requestorder" UserDataComponentName="requestorderTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="imsConnectionString (Settings)" DbObjectName="ims.requestorder" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `ro`, `client_code`, `creation_time`, `postedUser`, `approval`, `released` FROM `requestorder`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ro_itemTableAdapter" GeneratorDataComponentClassName="ro_itemTableAdapter" Name="ro_item" UserDataComponentName="ro_itemTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="imsConnectionString (Settings)" DbObjectName="ims.ro_item" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `ro`, `item_code`, `qty` FROM `ro_item`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="storeTableAdapter" GeneratorDataComponentClassName="storeTableAdapter" Name="store" UserDataComponentName="storeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="imsConnectionString (Settings)" DbObjectName="ims.store" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `supplier_code`, `item_code`, `item_name`, `qty`, `description`, `pending_removal` FROM `store`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="supplierTableAdapter" GeneratorDataComponentClassName="supplierTableAdapter" Name="supplier" UserDataComponentName="supplierTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="imsConnectionString (Settings)" DbObjectName="ims.supplier" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `supplier_code`, `supplier_name`, `contact_name`, `contact_number`, `email` FROM `supplier`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="userTableAdapter" GeneratorDataComponentClassName="userTableAdapter" Name="user" UserDataComponentName="userTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="imsConnectionString (Settings)" DbObjectName="ims.`user`" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `member_name`, `username`, `password`, `role` FROM `user`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="imsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="imsDataSet" msprop:Generator_UserDSName="imsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="client" msprop:Generator_TableClassName="clientDataTable" msprop:Generator_TableVarName="tableclient" msprop:Generator_TablePropName="client" msprop:Generator_RowDeletingName="clientRowDeleting" msprop:Generator_RowChangingName="clientRowChanging" msprop:Generator_RowEvHandlerName="clientRowChangeEventHandler" msprop:Generator_RowDeletedName="clientRowDeleted" msprop:Generator_UserTableName="client" msprop:Generator_RowChangedName="clientRowChanged" msprop:Generator_RowEvArgName="clientRowChangeEvent" msprop:Generator_RowClassName="clientRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="po_item" msprop:Generator_TableClassName="po_itemDataTable" msprop:Generator_TableVarName="tablepo_item" msprop:Generator_TablePropName="po_item" msprop:Generator_RowDeletingName="po_itemRowDeleting" msprop:Generator_RowChangingName="po_itemRowChanging" msprop:Generator_RowEvHandlerName="po_itemRowChangeEventHandler" msprop:Generator_RowDeletedName="po_itemRowDeleted" msprop:Generator_UserTableName="po_item" msprop:Generator_RowChangedName="po_itemRowChanged" msprop:Generator_RowEvArgName="po_itemRowChangeEvent" msprop:Generator_RowClassName="po_itemRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="purchaseorder" msprop:Generator_TableClassName="purchaseorderDataTable" msprop:Generator_TableVarName="tablepurchaseorder" msprop:Generator_TablePropName="purchaseorder" msprop:Generator_RowDeletingName="purchaseorderRowDeleting" msprop:Generator_RowChangingName="purchaseorderRowChanging" msprop:Generator_RowEvHandlerName="purchaseorderRowChangeEventHandler" msprop:Generator_RowDeletedName="purchaseorderRowDeleted" msprop:Generator_UserTableName="purchaseorder" msprop:Generator_RowChangedName="purchaseorderRowChanged" msprop:Generator_RowEvArgName="purchaseorderRowChangeEvent" msprop:Generator_RowClassName="purchaseorderRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="requestorder" msprop:Generator_TableClassName="requestorderDataTable" msprop:Generator_TableVarName="tablerequestorder" msprop:Generator_TablePropName="requestorder" msprop:Generator_RowDeletingName="requestorderRowDeleting" msprop:Generator_RowChangingName="requestorderRowChanging" msprop:Generator_RowEvHandlerName="requestorderRowChangeEventHandler" msprop:Generator_RowDeletedName="requestorderRowDeleted" msprop:Generator_UserTableName="requestorder" msprop:Generator_RowChangedName="requestorderRowChanged" msprop:Generator_RowEvArgName="requestorderRowChangeEvent" msprop:Generator_RowClassName="requestorderRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ro_item" msprop:Generator_TableClassName="ro_itemDataTable" msprop:Generator_TableVarName="tablero_item" msprop:Generator_TablePropName="ro_item" msprop:Generator_RowDeletingName="ro_itemRowDeleting" msprop:Generator_RowChangingName="ro_itemRowChanging" msprop:Generator_RowEvHandlerName="ro_itemRowChangeEventHandler" msprop:Generator_RowDeletedName="ro_itemRowDeleted" msprop:Generator_UserTableName="ro_item" msprop:Generator_RowChangedName="ro_itemRowChanged" msprop:Generator_RowEvArgName="ro_itemRowChangeEvent" msprop:Generator_RowClassName="ro_itemRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="store" msprop:Generator_TableClassName="storeDataTable" msprop:Generator_TableVarName="tablestore" msprop:Generator_TablePropName="store" msprop:Generator_RowDeletingName="storeRowDeleting" msprop:Generator_RowChangingName="storeRowChanging" msprop:Generator_RowEvHandlerName="storeRowChangeEventHandler" msprop:Generator_RowDeletedName="storeRowDeleted" msprop:Generator_UserTableName="store" msprop:Generator_RowChangedName="storeRowChanged" msprop:Generator_RowEvArgName="storeRowChangeEvent" msprop:Generator_RowClassName="storeRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="supplier" msprop:Generator_TableClassName="supplierDataTable" msprop:Generator_TableVarName="tablesupplier" msprop:Generator_TablePropName="supplier" msprop:Generator_RowDeletingName="supplierRowDeleting" msprop:Generator_RowChangingName="supplierRowChanging" msprop:Generator_RowEvHandlerName="supplierRowChangeEventHandler" msprop:Generator_RowDeletedName="supplierRowDeleted" msprop:Generator_UserTableName="supplier" msprop:Generator_RowChangedName="supplierRowChanged" msprop:Generator_RowEvArgName="supplierRowChangeEvent" msprop:Generator_RowClassName="supplierRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="user" msprop:Generator_TableClassName="userDataTable" msprop:Generator_TableVarName="tableuser" msprop:Generator_TablePropName="user" msprop:Generator_RowDeletingName="userRowDeleting" msprop:Generator_RowChangingName="userRowChanging" msprop:Generator_RowEvHandlerName="userRowChangeEventHandler" msprop:Generator_RowDeletedName="userRowDeleted" msprop:Generator_UserTableName="user" msprop:Generator_RowChangedName="userRowChanged" msprop:Generator_RowEvArgName="userRowChangeEvent" msprop:Generator_RowClassName="userRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
